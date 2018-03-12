@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*i%1j8vw+*b1l0qdmcyf4e#2s)47!0!!kz(t7%om2uyhgh@&$0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-v
+DEBUG=False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['159.89.42.90']
 
 
 # Application definition
@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
-        'USER': 'postgres',
-        'PASSWORD': 'SamfordUAB89!',
+        'NAME': 'portfolio',
+        'USER': 'portfoliocrud',
+        'PASSWORD': 'Starcraft920!',
         'HOST': 'localhost',
         'PORT': '5432'
     }
@@ -127,8 +127,9 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio/static/'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -138,3 +139,4 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
